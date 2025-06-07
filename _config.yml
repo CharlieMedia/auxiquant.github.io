@@ -1,7 +1,7 @@
 title: AuxiQuant
 description: The Future of Quant Intelligence
 baseurl: ""
-url: "https://auxiquant.github.io"
+url: "https://charliemedia.github.io"
 
 # Build settings
 markdown: kramdown
@@ -17,6 +17,7 @@ exclude:
   - node_modules
   - vendor
   - .gitignore
+  - .nojekyll
 
 # Collections
 collections:
@@ -33,4 +34,8 @@ defaults:
   - scope:
       path: "_services"
     values:
-      layout: "service" 
+      layout: "service"
+
+# GitHub Pages settings
+github:
+  metadata: true 

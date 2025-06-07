@@ -6,17 +6,17 @@ title: ""
 <nav class="main-nav">
   <div class="nav-container">
     <div class="logo">
-      <img src="/assets/images/logo.png" alt="AuxiQuant Logo">
+      <img src="{{ site.baseurl }}/assets/images/logo.png" alt="AuxiQuant Logo">
     </div>
     <ul class="nav-links">
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="/markets">Markets</a></li>
-      <li><a href="/trading">Trading</a></li>
-      <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/strategies">Strategies</a></li>
-      <li><a href="/research">Research</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/support">Support & Contact</a></li>
+      <li><a href="{{ site.baseurl }}/" class="active">Home</a></li>
+      <li><a href="{{ site.baseurl }}/markets">Markets</a></li>
+      <li><a href="{{ site.baseurl }}/trading">Trading</a></li>
+      <li><a href="{{ site.baseurl }}/portfolio">Portfolio</a></li>
+      <li><a href="{{ site.baseurl }}/strategies">Strategies</a></li>
+      <li><a href="{{ site.baseurl }}/research">Research</a></li>
+      <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+      <li><a href="{{ site.baseurl }}/support">Support & Contact</a></li>
     </ul>
   </div>
 </nav>
