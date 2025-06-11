@@ -10,13 +10,11 @@ title: ""
     </div>
     <ul class="nav-links">
       <li><a href="{{ site.baseurl }}/" class="active">Home</a></li>
-      <li><a href="{{ site.baseurl }}/markets">Markets</a></li>
-      <li><a href="{{ site.baseurl }}/trading">Trading</a></li>
+      <li><a href="{{ site.baseurl }}/markets-trading">Markets & Trading</a></li>
       <li><a href="{{ site.baseurl }}/portfolio">Portfolio</a></li>
-      <li><a href="{{ site.baseurl }}/strategies">Strategies</a></li>
-      <li><a href="{{ site.baseurl }}/research">Research</a></li>
+      <li><a href="{{ site.baseurl }}/strategies-research">Strategies & Research</a></li>
       <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-      <li><a href="{{ site.baseurl }}/support">Support & Contact</a></li>
+      <li><a href="{{ site.baseurl }}/support">Support</a></li>
     </ul>
   </div>
 </nav>
@@ -41,6 +39,28 @@ title: ""
   <p class="tagline">AuxiQuant: The Future of Quant Intelligence.</p>
 </div>
 
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>The Future of Quant Intelligence</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list"></ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>© 2024 AuxiQuant. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <style>
 body {
   background-color: #1e1e1e;
@@ -60,7 +80,7 @@ body {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1rem;
   display: flex;
@@ -111,8 +131,8 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   border-bottom: 1px solid #333;
-  width: 95%;
-  max-width: 1800px;
+  width: 98%;
+  max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -183,8 +203,8 @@ body {
 }
 
 .about-section {
-  width: 95%;
-  max-width: 1800px;
+  width: 98%;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 3rem 2rem;
   background-color: #252526;
