@@ -11,6 +11,271 @@ permalink: /strategies-research/
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-nav {
+      background-color: #252526;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      margin: 0.5rem 0;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #d4d4d4;
+      font-weight: 500;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: #4CAF50;
+      background-color: #2d2d2d;
+    }
+
+    .nav-links a.active {
+      color: #4CAF50;
+      background-color: #2d2d2d;
+    }
+
+    .strategies-research-section {
+      padding: 2rem;
+      max-width: 1400px;
+      width: 98%;
+      margin: 100px auto 2rem;
+      flex: 1;
+    }
+
+    .intro-section {
+      background-color: #252526;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #d4d4d4;
+    }
+
+    .section-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .strategies-section, .research-section {
+      background-color: #252526;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .strategy-card, .research-card {
+      background-color: #2d2d2d;
+      padding: 1.5rem;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: #4CAF50;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .strategy-goal {
+      color: #d4d4d4;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    li {
+      color: #d4d4d4;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+      margin-left: 1rem;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    .strategy-note, .coming-soon, .contact-note {
+      color: #4CAF50;
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    .publications-list li {
+      margin-bottom: 0.8rem;
+    }
+
+    .partner-section {
+      background-color: #2d2d2d;
+      padding: 1.5rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+    }
+
+    .quote {
+      background-color: #2d2d2d;
+      padding: 1.5rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+      border-left: 4px solid #4CAF50;
+    }
+
+    .quote p {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #d4d4d4;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote footer {
+      color: #4CAF50;
+      text-align: right;
+    }
+
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #45a049;
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      background-color: #252526;
+      padding: 2rem 0;
+      margin-top: auto;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-text {
+      color: #d4d4d4;
+      margin: 0;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-link {
+      color: #d4d4d4;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: #4CAF50;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+      }
+      
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+      }
+      
+      .strategies-research-section {
+        padding: 1rem;
+        margin-top: 140px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="main-nav">
@@ -37,7 +302,6 @@ permalink: /strategies-research/
     <div class="section-container">
       <div class="strategies-section">
         <h2>📊 Core Trading Strategies</h2>
-
         <div class="strategy-card">
           <h3>📈 Momentum Rotation Strategy</h3>
           <p class="strategy-goal"><strong>Goal:</strong> Capture strong trends by rotating into top-performing assets based on recent momentum.</p>
@@ -115,278 +379,14 @@ permalink: /strategies-research/
   </div>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <div class="footer-col-wrapper">
-        <div class="footer-col footer-col-1">
-          <ul class="contact-list">
-            <li>The Future of Quant Intelligence</li>
-          </ul>
-        </div>
-
-        <div class="footer-col footer-col-2">
-          <ul class="social-media-list"></ul>
-        </div>
-
-        <div class="footer-col footer-col-3">
-          <p>© 2024 AuxiQuant. All rights reserved.</p>
-        </div>
+    <div class="footer-content">
+      <p class="footer-text">© 2024 AuxiQuant. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Terms of Service</a>
+        <a href="#" class="footer-link">Contact Us</a>
       </div>
     </div>
   </footer>
-
-  <style>
-  body {
-    background-color: #1e1e1e;
-    color: #d4d4d4;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .main-nav {
-    background-color: #252526;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-
-  .nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo img {
-    height: 60px;
-    width: auto;
-    margin: 0.5rem 0;
-  }
-
-  .nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: #d4d4d4;
-    font-weight: 500;
-    padding: 0.5rem 0.8rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
-
-  .nav-links a:hover {
-    color: #4CAF50;
-    background-color: #2d2d2d;
-  }
-
-  .nav-links a.active {
-    color: #4CAF50;
-    background-color: #2d2d2d;
-  }
-
-  .strategies-research-section {
-    padding: 2rem;
-    max-width: 2000px;
-    width: 98%;
-    margin: 100px auto 2rem; /* Increased top margin to prevent overlap */
-    flex: 1;
-  }
-
-  .intro-section {
-    background-color: #252526;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #d4d4d4; /* Ensure text is visible */
-  }
-
-  .section-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .strategies-section, .research-section {
-    background-color: #252526;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-
-  .strategy-card, .research-card {
-    background-color: #2d2d2d;
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-  }
-
-  h1 {
-    color: #4CAF50;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  h2 {
-    color: #4CAF50;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5rem;
-  }
-
-  h3 {
-    color: #4CAF50;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .strategy-goal {
-    color: #d4d4d4;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 1rem 0;
-  }
-
-  li {
-    color: #d4d4d4;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #333;
-    margin-left: 1rem;
-  }
-
-  li:last-child {
-    border-bottom: none;
-  }
-
-  .strategy-note, .coming-soon, .contact-note {
-    color: #4CAF50;
-    font-style: italic;
-    margin-top: 1rem;
-  }
-
-  .publications-list li {
-    margin-bottom: 0.8rem;
-  }
-
-  .partner-section {
-    background-color: #2d2d2d;
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin-top: 2rem;
-  }
-
-  .quote {
-    background-color: #2d2d2d;
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin-top: 2rem;
-    border-left: 4px solid #4CAF50;
-  }
-
-  .quote p {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #d4d4d4;
-    margin-bottom: 0.5rem;
-  }
-
-  .quote footer {
-    color: #4CAF50;
-    text-align: right;
-  }
-
-  a {
-    color: #4CAF50;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  a:hover {
-    color: #45a049;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 768px) {
-    .nav-container {
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      width: 100%;
-    }
-    
-    .nav-links a {
-      width: 100%;
-      text-align: center;
-      padding: 0.8rem;
-    }
-    
-    .strategies-research-section {
-      padding: 1rem;
-      margin-top: 140px; /* Increased for mobile */
-    }
-
-    .footer-col-wrapper {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-  }
-
-  .site-footer {
-    background-color: #252526;
-    padding: 2rem 0;
-    margin-top: auto;
-  }
-
-  .footer-col-wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .footer-col {
-    color: #d4d4d4;
-  }
-
-  .contact-list, .social-media-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  </style>
 </body>
 </html> 

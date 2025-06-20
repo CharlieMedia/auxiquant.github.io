@@ -1,7 +1,7 @@
 ---
 layout: null
-title: "Markets & Trading"
-permalink: /markets-trading/
+title: "Blog"
+permalink: /blog/
 ---
 
 <!DOCTYPE html>
@@ -78,7 +78,7 @@ permalink: /markets-trading/
       background-color: #2d2d2d;
     }
 
-    .markets-section {
+    .blog-section {
       padding: 2rem;
       max-width: 1400px;
       width: 98%;
@@ -88,7 +88,7 @@ permalink: /markets-trading/
 
     .intro-section {
       background-color: #252526;
-      padding: 1.5rem 2rem;
+      padding: 2rem;
       border-radius: 8px;
       margin-bottom: 2rem;
       text-align: center;
@@ -97,108 +97,128 @@ permalink: /markets-trading/
       color: #d4d4d4;
     }
 
-    .intro-section h1 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #4CAF50;
-      font-size: 2.2rem;
-    }
-
-    .intro-section p {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .markets-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .market-card {
-      background-color: #252526;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .market-card h3 {
-      color: #4CAF50;
-      font-size: 1.5rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-
-    .market-card ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .market-card li {
-      color: #d4d4d4;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #333;
-    }
-
-    .market-card li:last-child {
-      border-bottom: none;
-    }
-
-    .infrastructure-section {
+    .posts-section {
       background-color: #252526;
       padding: 2rem;
       border-radius: 8px;
       margin-bottom: 2rem;
     }
 
-    .infrastructure-section h2 {
+    .posts-section h2 {
       color: #4CAF50;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
     }
 
-    .infrastructure-list {
-      list-style-type: none;
+    .post-list {
+      list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    .infrastructure-list li {
-      color: #d4d4d4;
-      padding: 1rem;
-      margin-bottom: 1rem;
+    .post-item {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
       background-color: #2d2d2d;
       border-radius: 6px;
+      transition: transform 0.3s ease;
     }
 
-    .infrastructure-list li:last-child {
+    .post-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .post-item:last-child {
       margin-bottom: 0;
     }
 
-    .pipeline-section {
+    .post-item h3 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .post-item h3 a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+
+    .post-item h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .post-meta {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .post-excerpt {
+      color: #d4d4d4;
+      line-height: 1.6;
+    }
+
+    .topics-section {
       background-color: #252526;
       padding: 2rem;
       border-radius: 8px;
+      margin-bottom: 2rem;
     }
 
-    .pipeline-section h2 {
+    .topics-section h2 {
       color: #4CAF50;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
     }
 
-    .pipeline-diagram {
+    .topics-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .topic-item {
       background-color: #2d2d2d;
-      padding: 2rem;
+      padding: 1rem;
       border-radius: 6px;
-      font-family: monospace;
-      white-space: pre;
-      overflow-x: auto;
       color: #d4d4d4;
-      line-height: 1.6;
+    }
+
+    .contribute-section {
+      background-color: #252526;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .contribute-section h2 {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .contribute-section p {
+      color: #d4d4d4;
+      margin-bottom: 1rem;
+    }
+
+    .contribute-section a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    .contribute-section a:hover {
+      text-decoration: underline;
+    }
+
+    .notification {
+      text-align: center;
+      color: #4CAF50;
+      font-style: italic;
+      margin-top: 2rem;
     }
 
     .site-footer {
@@ -257,12 +277,12 @@ permalink: /markets-trading/
         padding: 0.8rem;
       }
       
-      .markets-section {
+      .blog-section {
         padding: 1rem;
         margin-top: 140px;
       }
 
-      .markets-grid {
+      .topics-list {
         grid-template-columns: 1fr;
       }
 
@@ -281,72 +301,54 @@ permalink: /markets-trading/
       </div>
       <ul class="nav-links">
         <li><a href="{{ site.baseurl }}/">Home</a></li>
-        <li><a href="{{ site.baseurl }}/markets-trading" class="active">Markets & Trading</a></li>
+        <li><a href="{{ site.baseurl }}/markets-trading">Markets & Trading</a></li>
         <li><a href="{{ site.baseurl }}/portfolio">Portfolio</a></li>
         <li><a href="{{ site.baseurl }}/strategies-research">Strategies & Research</a></li>
-        <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+        <li><a href="{{ site.baseurl }}/blog" class="active">Blog</a></li>
         <li><a href="{{ site.baseurl }}/support">Support</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="markets-section">
+  <div class="blog-section">
     <div class="intro-section">
-      <h1>Markets & Trading</h1>
-      <p>AuxiQuant applies advanced AI and quantitative methods across diverse markets. We combine real-time data processing, predictive analytics, and trading automation to create powerful, scalable trading systems.</p>
+      <h1>📝 AuxiQuant Insights Blog</h1>
+      <p>Welcome to the AuxiQuant Blog — where data meets domain expertise.</p>
+      <p>Here, we share thoughts on quantitative trading, AI in finance, strategy design, risk models, and market trends. Each post offers actionable insights, grounded in data and experimentation.</p>
     </div>
 
-    <div class="markets-grid">
-      <div class="market-card">
-        <h3>📊 Equities (US & Global)</h3>
-        <ul>
-          <li>Sector rotation and momentum strategies</li>
-          <li>Short-term AI-driven trading on sentiment and earnings surprise</li>
-          <li>Portfolio optimization with factor models</li>
-        </ul>
-      </div>
-
-      <div class="market-card">
-        <h3>💰 Crypto Assets</h3>
-        <ul>
-          <li>BTC, ETH, SOL, and emerging altcoins</li>
-          <li>Deep learning models for volatility and trend prediction</li>
-          <li>Backtested breakout, arbitrage, and sentiment-based strategies</li>
-        </ul>
-      </div>
-
-      <div class="market-card">
-        <h3>📉 Options & Derivatives</h3>
-        <ul>
-          <li>Backtesting implied volatility skews</li>
-          <li>AI models for predicting delta hedging pressure</li>
-          <li>Strategy modules: Iron Condors, Vertical Spreads, Straddles</li>
-        </ul>
-      </div>
-
-      <div class="market-card">
-        <h3>🌍 Macro & Commodities (Coming Soon)</h3>
-        <ul>
-          <li>Currency trends, gold/oil sentiment analysis</li>
-          <li>NLP-driven macro news filtering</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="infrastructure-section">
-      <h2>🤖 AI-Powered Trading Infrastructure</h2>
-      <ul class="infrastructure-list">
-        <li><strong>Real-Time Signal Engine:</strong> Combines technical, sentiment, and volatility signals</li>
-        <li><strong>Backtesting Framework:</strong> High-speed backtests using pandas, Zipline, and custom engines</li>
-        <li><strong>Execution Layer:</strong> (Optional) Live trading via APIs (Alpaca, Binance, Interactive Brokers)</li>
+    <div class="posts-section">
+      <h2>📰 Recent Posts</h2>
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li class="post-item">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <div class="post-meta">
+              <strong>{{ post.date | date: "%B %d, %Y" }}</strong> | {{ post.category }}
+            </div>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          </li>
+        {% endfor %}
       </ul>
     </div>
 
-    <div class="pipeline-section">
-      <h2>🔄 Sample Trading Pipeline</h2>
-      <div class="pipeline-diagram">
-Data Stream → Feature Engineering → AI Model (e.g., LSTM) → Signal Generation → Execution Logic → Performance Monitoring</div>
+    <div class="topics-section">
+      <h2>🧠 Topics We Cover</h2>
+      <ul class="topics-list">
+        <li class="topic-item">📈 Quant Strategy Design & Backtesting</li>
+        <li class="topic-item">🧮 Machine Learning in Finance</li>
+        <li class="topic-item">🧬 Large Language Models (LLMs) & Sentiment Analysis</li>
+        <li class="topic-item">🔍 Macro Analysis & AI Predictions</li>
+        <li class="topic-item">💼 Building Robust Trading Systems</li>
+      </ul>
     </div>
+
+    <div class="contribute-section">
+      <h2>📤 Want to Contribute?</h2>
+      <p>We're open to publishing quality guest posts related to quantitative finance, AI/ML, or markets. Reach out at <a href="mailto:support@auxiquant.com">support@auxiquant.com</a></p>
+    </div>
+
+    <p class="notification">🔔 <em>Stay tuned! New articles are published regularly.</em></p>
   </div>
 
   <footer class="site-footer">
